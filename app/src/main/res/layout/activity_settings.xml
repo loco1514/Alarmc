@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp"
+    android:saveEnabled="false"
+    tools:context=".SettingsActivity">
+
+        <TimePicker
+            android:id="@+id/timePicker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="false"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="77dp"
+            android:layout_marginEnd="16dp"
+            android:addStatesFromChildren="false"
+            android:alwaysDrawnWithCache="false"
+            android:animateLayoutChanges="false"
+            android:animationCache="false" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupWeek"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/timePicker"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp">
+
+            <RadioButton
+                android:id="@+id/radioButtonEven"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:keepScreenOn="false"
+                android:nestedScrollingEnabled="false"
+                android:text="Четная неделя" />
+
+            <RadioButton
+                android:id="@+id/radioButtonOdd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Нечетня неделя" />
+        </RadioGroup>
+
+        <Spinner
+            android:id="@+id/spinnerDayOfWeek"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/radioGroupWeek"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp" />
+
+    <CheckBox
+        android:id="@+id/checkBoxRepeat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinnerDayOfWeek"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Повторять" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="62dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="16dp"
+        android:onClick="onSaveButtonClick"
+        app:icon="@android:drawable/ic_input_add" />
+
+        <Button
+            android:id="@+id/btnExit"
+            android:layout_width="64dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="16dp"
+            android:onClick="onSaveButtonClick"
+            android:text=""
+            app:icon="@android:drawable/ic_delete"
+            app:rippleColor="#03D9C4"
+            app:strokeColor="#03D9C4" />
+    </RelativeLayout>
+</ScrollView>
